@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{ 
+       margin: 0;
+       padding: 0;
+
+		 }
+		.container{
+		 margin: 0;
+		 padding: 0;
+		 display: flex;
+		  flex-direction: row;
+		  min-height:10	0vh;
+		  background: black;
+	 background-position:center;
+		  background-repeat: no-repeat;
+		  height:550px;
+		  position: relative;
+		  backface-visibility:visible;
+		  background-attachment: inherit;
+		}
+		.left{
+			width: 500px;
+			height: 300px;
+			border:none;
+			color: white;
+			padding: 30px;
+			margin-left:7%;
+			margin-top:100px;
+			background: black;
+			position: ;
+		}
+		h1{color: darkorange;}
+			h2{color: cyan;font-size:30px;font-weight: bold;}
+		h3{font-family: monospace;}
+		.buttonlink{
+			width: 100%;
+			height: 100px;
+			background: transparent;
+		}
+
+
+
+
+  .buttonlink      a{
+            border:none;
+            color: white;
+            text-decoration: none;
+            width:200px;
+            text-align: center;
+            padding: 30px;
+            margin-top:200px;
+            position: relative;
+            display: inline-block;
+            border-radius:10px;
+            overflow: hidden;
+            margin-top:20px;
+            background: transparent;
+            font-size: 30px;
+
+        }
+    .buttonlink        a:hover{
+            color:black;
+            background: lightgrey;
+            box-shadow: 0 0 10px #2196f3,0 0 20px #2196f3,0 0 80px #2196f3; 
+            transition: 0.5s;
+            transition-delay:1s;
+            color: blue;
+
+        }
+    .buttonlink    a span{
+            position: absolute;
+            display: block;
+
+        }
+   .buttonlink     a span:nth-child(1){
+            top: 0;
+            left:-100%;
+            width:100%;
+            height: 2px;
+            background:linear-gradient(90deg,transparent,#2196f3);
+        }
+  .buttonlink      a:hover span:nth-child(1){
+            left:100%;
+            transition: 0.5s;
+}
+  .buttonlink  a span:nth-child(3){
+            bottom: 0;
+            right:-100%;
+            width:100%;
+            height: 2px;
+            background:linear-gradient(270deg,transparent,#2196f3);
+        }
+.buttonlink   a:hover span:nth-child(3){
+            right:100%;
+            transition: 0.5s;
+            transition-delay:0.75s;
+}
+    
+
+
+
+.buttonlink a span:nth-child(2){
+            top: -100%;
+            right:0%;
+            width:2%;
+            height: 100%;
+            background:linear-gradient(180deg,transparent,#2196f3);
+        }
+ .buttonlink a:hover span:nth-child(2){
+            top:100%;
+            transition: 0.5s;
+            transition-delay:0.25s;
+}
+  .buttonlink a span:nth-child(4){
+            bottom: -100%;
+            left:0%;
+            width:2%;
+            height: 100%;
+            background:linear-gradient(360deg,transparent,#2196f3);
+        }
+    .buttonlink    a:hover span:nth-child(4){
+            bottom:100%;
+            transition: 1s;
+            transition-delay:0.75s;
+}
+.buttonlink .btn{
+            border:none;
+            color: grey;
+            width:200px;
+            text-align: center;
+            padding: 40px;
+            margin-top:200px;
+            border-radius:10px;
+            background: black;
+            
+}
+.buttonlink .btn:hover{
+    box-shadow:0 0 20px blue,0 0 20px white ,0 0 20px cyan;
+    background: linear-gradient(90deg,blue,yellow,white,cyan);
+            animation: blink 2s linear infinite;
+            background-size: 500%;
+            transition: 0.5s;
+}
+@keyframes blink{
+    from{background-position:0%;}
+   to{background-position: 500%;}
+    
+}
+
+
+.right{
+			width: 190px;
+			height: 270px;
+			border: none;
+			color: white;
+			padding: 30px;
+		   left:-655px;
+			margin-top:54px;
+			background: black;
+			position: relative;
+
+}
+
+
+.right  .loader{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background:linear-gradient(45deg,transparent,transparent 45%,green);
+            animation: blinka 0.2s linear infinite;
+
+            }
+            @keyframes blinka{
+                0%{ 
+                    transform: rotate(0deg);
+                filter: hue-rotate(3600deg);
+            transform: translate(151%,-79.3%) scale(0.5);
+                }
+                100%{
+                 transform: rotate(360deg);
+                 filter: hue-rotate(3600deg);
+                box-shadow: 0 0 10px red,0 0 10px chocolate,0 0 80px pink, 0 0 300px cyan;
+            transform: translate(151%,-79.3%) scale(0.5);
+                }
+            }
+
+   .right     .loader:before{
+            position: absolute;
+            content: "";
+            top: 6px;
+            left: 6px;
+          right: 6px;
+          bottom: 6px;
+          background: white;
+          border-radius:50%;
+          z-index: 1000;
+           text-align: center;
+            color: white;
+            filter: blur(5px);
+
+
+        }
+     .right    .loader:after{
+            position: absolute;
+            content: "";
+            top:0px;
+            left: 0px;
+          right: 0px;
+          bottom: 0px;
+         background:linear-gradient(45deg,transparent,transparent 40%,green);
+          border-radius:0%;
+          z-index: 1000;
+          z-index: 1;
+          filter: blur(30px);
+
+
+        }
+        .logback{
+        width:1500px;
+        height: 400px;
+        background-image: url(logback.png);
+        background-size: cover;
+        background-size:400px 400px;
+        background-repeat: no-repeat;
+       background-origin: padding-box;
+        position: relative;
+        left:10px;
+        top: 60px;
+
+
+        }
+        .text{
+        width:125%;
+        margin:-30px;
+        padding:10px;
+        height: 270px;
+        border: none;
+        background-image: url(d04.png);
+        background-size: cover;
+        color: blue;
+
+        }
+.text:hover{
+    transition: 2s;
+    grid-area:one;
+    background-image:url(pub5.png);
+    background-size: cover;
+}
+
+        .last{
+        width:435px;
+        margin:0px;
+        padding:10px;
+        height: 470px;
+        border:none;
+        position: absolute;
+        top:15px;
+        left: 814px;
+        background: white;
+        background-image: url(do2.png);
+        background-size: cover;
+        display: flex;
+        flex-direction:column;
+        }
+        .top{flex: 2.4;none}
+        .middle{flex: 1;none}
+        .footer{flex: 1.6;none}
+
+
+.profile{
+    width:73px;
+    height: 73px;
+    background: white;
+    border-radius: 50%;
+    border: none;
+    margin-top:-11px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.profile:hover{}
+.border{
+    position: relative;
+     width:67px;
+    height: 67px;
+    background-image: url(me.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+    border:before{
+    margin-left:-500px;
+    margin-top:-1px;
+    position: absolute;
+    content: "";
+    width:500px;
+    height: 500px;
+    border: 1px solid blue;
+    background: white;
+}
+.border:hover .border::before{
+      background:red;
+
+}
+
+.top button{
+    width: 90px;
+    margin-top:120px;
+    background: #37b5ff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+}
+.top button:hover{
+    background-color: #3770ff;
+}
+
+.links{
+    width: 400px;
+    height:20px;
+    background: black;
+    border:none;
+    margin-top:30px;
+    margin-left:20px;
+    color: white;
+}
+
+.links ul li{
+    display: block;
+    float: left;
+    padding: 10px;
+    margin-top:-10px;
+
+}
+.links ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+       font-size: 10px;
+}
+.links ul li a:hover{
+    color: #366eff;
+   
+
+}
+.links ul li a img{width: 20px;}
+.footer .about{
+    width: 433px;
+    height: 35px;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    border:none;
+}
+.footer .about h1{font-size:16px;margin-top:-10px;}
+.footer .about p{font-size:8px;}
+
+.image{
+    width:286px;
+    height:110px;
+    border: none;
+    margin:5px;
+    margin-top:1px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "one two"
+    "one three";
+    grid-gap:2px;
+
+}
+.one{background: green;grid-area:one;background-image:url(pub1.png);background-size: cover;}
+.two{background: cyan;grid-area: two;background-image:url(pub2.png);background-size: cover;}
+.three{background: red;grid-area: three;background-image:url(pub3.png);background-size: cover;}
+.one:hover{transition:2s;background: green;grid-area:one;background-image:url(pub4.png);background-size: cover;}
+
+.leftoncash{
+     width:145px;
+    height:110px;
+    border:none;
+    margin:5px;
+    margin-left: 293px;
+    margin-top:-119px;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:4fr 1fr 4fr ;
+    grid-template-areas: 
+    "1st nd"
+    "rd rd"
+    "th th"
+
+}
+.leftoncash .st{
+    background-color: none;
+    grid-area:st;
+}
+.leftoncash .nd{
+    background: black;
+    grid-area: nd;
+      font-weight: bold;
+    color: white;
+}
+.leftoncash .rd{
+    background: blue;
+    grid-area: rd;
+      font-weight: bold;
+    color: white;
+}
+.leftoncash .th{
+    background: green;
+    grid-area: th;
+    font-weight: bold;
+    color: white;
+
+}
+
+
+.Login{
+      width: 303px;
+    height: 96px;
+    border: 10px solid blue;
+    border-radius:9px;
+     color: white;
+     position: absolute;
+     margin-top:-230px;
+     transform: translate(231%,-120.3%) scale(0.25);
+     background: transparent;
+     content: none; 
+     filter: blur(65px);
+     padding:10px;
+     display: flex;
+     flex-direction:column;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+
+
+    }
+    .Login:hover{
+        position: absolute;
+    border:none;
+     filter: blur(0px);
+         width: 300px;
+        padding:10px;
+           backdrop-filter: blur(4px);
+          height: 135px;
+     transform: translate(150%,-89.3%) scale(3);
+   
+    }
+    .Login h3{
+        color:cyan;
+    }
+    .Login hr{width: 300px;border: none;height:3px;background:linear-gradient(90deg,orange,blue); margin-top:-6px;}
+    .Login input{
+        margin-top:10px;
+        width: 150px;
+        background: none;
+        border:none;
+        border-bottom: 1px solid white;
+        border-radius: 5px;
+        font-size: 7px;
+        height: 20px;
+        text-align: center;
+        outline: none;
+        color: white;
+    }
+      .Login input:hover{background: white;color: blue;transition: 1s;}
+    .Login button{
+        width: 150px;
+        border:none;
+        border-radius: 5px;
+        font-size: 7px;
+        margin-top:5px;
+       /* background: #376efd;*/
+       background:linear-gradient(30deg,#376efd,white);
+        color: blue;
+        font-weight: bold;
+        height: 20px;
+        box-shadow: 0 0 20px blue;   
+    }
+      .Login button:hover{background:linear-gradient(30deg,white,green);color:green;   box-shadow: 0 0 20px green; transition: 3s; }
+    .Login a{
+        margin-left: 300px;
+        margin-top: -12px;
+        text-decoration: none;
+        color: red;
+    }
+
+
+
+    .Signup{
+   
+    width: 792px;
+    padding:20px;
+    backdrop-filter:none;
+    filter: blur(50px);
+    background: none;
+    height: 259px;
+    border: none;
+    color: white;
+    border-radius:9px;
+    display: flex;
+    flex-direction: column;
+     color: cyan;
+     margin-top:-500px;
+     transform: translate(54%,9%) scale(0.10);
+        overflow: auto;
+
+
+
+    }
+    .Signup:hover{
+        transition:1s;
+    backdrop-filter: blur(16px);
+    border: none;
+         filter: blur(0px);
+        width: 770px;
+        height: 430px;
+        padding:20px;
+     transform: translate(17%,-1%) scale(1);
+     position: absolute;
+    }
+    .Signup h3{margin-left: 300px;}
+     .Signup input{
+        margin-top:10px;
+        background: none;
+        border:none;
+        border-bottom: 1px solid white;
+        font-size: 17px;
+        height: 20px;
+        text-align: center;
+        outline: none;
+        color: white;
+    }
+     .Signup input:hover{background: white;color: blue;font-size:18;transition: 1s;}
+    .Signup button{
+        width: 450px;
+        border:none;
+        border-radius: 5px;
+        font-size:14px;
+        margin-top:20px;
+       /* background: #376efd;*/
+        color: blue;
+        font-weight: bold;
+        padding:20px;
+         background:linear-gradient(30deg,#376efd,white);
+    }
+    .Signup button:hover{
+         background:blue;
+         color:white;
+         transition: 2s;
+
+    }
+     .Signup a{
+        margin-left: 0px;
+        font-size: 50px;
+        margin-top: -12px;
+        text-decoration: none;
+        color: red;
+    }
+     .Signup a:hover{color: green;}
+
+    .Signup hr{width: 700px;border: 3px solid blue;background:blue margin-top:-6px;}
+
+	</style>
+
+
+
+
+</head>
+<body>
+	
+	<div class="container">
+		 
+
+		<div class="left">
+
+
+
+
+
+
+
+			<h1>Babu'ltd</h1>
+			<h2>web for Bonus!   ($)</h2><hr>
+			<h3>Your getway to have <br>your own online website<br>in your trading</h3>
+			<div class="buttonlink">
+    <a href="">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+      Next  &rarr;
+    </a>
+			</div>
+		</div>
+
+
+	
+<div class="logback"></div>
+
+	<div class="right">
+		<div class="text"></div>
+          <div class="loader"></div>	
+	</div>
+	
+
+
+	</div>
+	<div class="last">
+	    <div class="top">
+	    	<div class="profile"> <div class="border"></div> </div>
+            <div><button>Signup</button>&nbsp;<button>Login</button></div>
+
+	    </div>
+	    <div class="middle">
+         
+         <div class="links">
+             <ul>
+                 <li><a href="#"><abbr title="connect to Babu'sWhatsapp!"><img src="tssp.png"></abbr></a></li>
+                 <li><a href="#"><abbr title="connect to Babu'X!"><img src="twitter.png"></abbr></a></li>
+                 <li><a href="#"><abbr title="connect to Babu'sfacebook lite!"><img src="fb.png"></abbr></a></li>
+                 <li><a href="#"><abbr title="connect to Babu'stelgrame!"><img src="tlgrm.png"></abbr></a></li>
+                 <li><a href="#"><abbr title="connect to Babu instagram!"><img src="ig.png"></abbr></a></li>
+                 <li><a href="#"><abbr title="connect  to Babu'sMicrosoft!">Microsoft Team's</abbr></a></li>
+
+             </ul>
+         </div>   
+        </div>
+		<div class="footer">
+        <div class="about">
+            <h1>About_us:</h1>
+            <p>the section utilize the three dimitional stretch according frontend carrer within Rwanda</p>
+            <p>we may make you more understanding about in this inbox</p>
+            <p style="color: #3770ff;">Address:From Rwanda,huye,butare,Iprc_huye,22RP04774</p>
+        </div> 
+        <div class="image">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+        <div class="leftoncash">
+            <div class="st"></div>
+            <div class="nd">$600K for web</div>
+            <div class="rd">$4.5k Online shop</div>
+            <div class="th">$7K+ deals..</div>
+        </div>   
+
+        </div>
+
+	</div>
+
+
+
+    <div class="Login">
+        <a href="">&times;</a>
+
+        <h3>Login</h3><hr>
+        <input type="text" name="name" placeholder="enter name">
+        <input type="password" name="password" placeholder="enter passwaord here">
+        <button>Login</button>
+
+    </div>
+
+
+
+ <div class="Signup">
+        <a href="">&times;</a>
+
+        <h3>Account Creation</h3>
+        <hr>
+        <input type="text" name="name" placeholder="enter name">
+        <input type="email" name="email" placeholder="enter email">
+        <input type="contacts" default="" value="(+250)" name="phone" placeholder="enter phone number">
+        <label>Opinon here About your wants here in pdf file format please!</label><input type="file" name="purpose" >
+        <label>Upload your C'v here ID n<sup>o</sup> in screenshoot</label><input type="file" name="purpose" >
+        <input type="map" name="adress" placeholder="enter adress">
+        <input type="password" name="password" placeholder="Create passwaord">
+        <input type="password" name="copassword" placeholder="confirm passwaord">
+
+        <button>Save Account</button>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
